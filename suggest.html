@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<title>Suggestion</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- my css -->
+<link rel="stylesheet" href="./css/fan.css">
+<!-- my icon -->
+<link rel="title icon" href="./images/heart.png">
+<!-- my function -->
+<script type="text/javascript" src="./js/index.js"></script>
+
+<body>
+  <!-- click menu to show the hidden sidebar -->
+	<nav class="fan-sidebar fan-bar-block fan-card fan-top fan-xlarge" style="display:none;width:30%;min-width:300px;z-index:4;" id="fanbar">
+		<a href="javascript:void(0)" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/X.png" alt="Fan Club" width="20%">Close Menu</a>
+		<a href="index.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/sweet.png" alt="Fan Club" width="30%">Home</a>
+		<a href="recipes.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/recipes.png" alt="Fan Club" width="30%">Recipes</a>
+		<a href="suggest.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/suggest.png" alt="joinus" width="30%">Suggestion</a>
+		<a href="tool.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/tool.png" alt="tool" width="30%">Tool</a>
+	</nav>
+
+  <!-- menu design -->
+	<div class="fan-top" >
+		<div class="fan-xlarge" style="max-width:1200px;margin:auto">
+			<div class="fan-display-topleft fan-button fan-padding-16 fan-left" onclick="fan_open()">☰Suggestion</div>
+			<div class="fan-center fan-padding-16"><br></div>
+			<div class="header">
+				<div class="progress-container">
+					<div class="progress-bar" id="myBar"></div>
+				</div>  
+			</div>
+		</div>
+	</div>
+
+  <!-- form for user to share opinion -->
+  <div class="fan-main fan-content fan-padding" style="max-width:1200px; margin-top:15%;">
+
+    <div id="ff1" class="fan-container fan-card-4 fan-center">
+
+      <h1>Share Opinion</h1>
+      <!-- form input data validation-->
+        <form name="f1" id="f1_temp" action="" onsubmit="print_result()" method="post">
+          <div class="fan-row-padding">
+            <div class="fan-half" style="padding-bottom: 60px;text-align: left;">
+              <label for="img">Food photo:</label>
+              <input type="file" class="imagetextalignsuggest" accept="image/*" onchange="preview_image(event)">
+              <img id="output_image" style="width:300px;height:300px; float:right;">
+            </div>
+            <div style="width:850px;display: table-cell;">
+              <div class="fan-half">
+                <input class="fan-input" type="text" placeholder="Name" required name="Name" pattern="^[A-Z][a-z]*"
+                  title="Capital first character">
+              </div>
+              <div class="fan-half">
+                <input class="fan-input" type="text" placeholder="Username" required name="Username">
+              </div>
+              <div class="fan-half">
+                <input class="fan-input" type="Password" placeholder="Password" required name="Password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  title="At least one number, one uppercase, one lowercase, and eight characters">
+              </div>
+              <div class="fan-half">
+                <input class="fan-input" type="email" placeholder="Email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required name="Email">
+              </div>
+              <div class="fan-half">
+                <input class="fan-input" type="tel" placeholder="Phone" required name="Tel" pattern="[0-9]{8}">
+              </div>
+              <div class="fan-half">
+                <input class="fan-input fan-padding-16" type="datetime-local" placeholder="Date and time" required
+                  name="date" value="2020-05-08T20:00">
+              </div>
+            </div>
+            <hr>
+
+            <!-- radio design with diable function-->
+            <div style="font-size:12px; font-family:Arial;text-align: left;">
+              <p>
+              <h5><b>Please select your choice:</b></h5>
+              </p>
+              <input type="radio" name="choice" value="Share Recipes" required onclick="disableCol()">
+              <label for="choice">Share Recipes</label><br>
+              <input type="radio" name="choice" value="Give Recommendations" onclick="disableCol()" checked="checked">
+              <label for="choice">Give Recommendations</label><br>
+            </div>
+            <hr>
+            <!-- checkbox design -->
+            <div style="font-size:12px; font-family:Arial;text-align: left;">
+              <p>
+              <h5><b>Which of the recipe(s) do you want to leave a comment on?</b></h5>
+              </p>
+              <div>
+                <input type="checkbox" id="recipe1" name="recipe" value="Tiramisu">
+                <label for="recipe1">Tiramisu</label><br>
+                <input type="checkbox" id="recipe2" name="recipe" value="Brownie">
+                <label for="recipe2">Chocolate Brownie</label><br>
+                <input type="checkbox" id="recipe3" name="recipe" value="RedVelvet">
+                <label for="recipe3">Red Velvet Cake</label>
+              </div>
+            </div>
+            <hr><br>
+            <!-- submut & reset -->
+            <div style="font-size:12px; font-family:Arial;text-align: left;">
+              <textarea name="message" rows="10" cols="130" style="width: 100%;"
+                placeholder="Share your recipes or opinions..."></textarea>
+              <div style="text-align: center;">
+                <button class="fan-btn fan-black fan-section" type="submit">SEND</button>
+                <button type="reset" class="fan-btn fan-black fan-section" onclick="resetIMG()">Reset</button>
+              </div>
+            </div>
+          </div>
+        </form>
+    </div>
+    <div class="fan-container fan-card-4 fan-center">
+      <h1>Thank you</h1>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <!-- background design -->
+  <footer id="footer" class="footer" style="display: none;"> 
+    <div class="fan-main fan-content" style="height:50px;">
+      <div class="fan-main fan-content fan-padding">
+  
+      <a href="https://www.instagram.com/dessert_club555/">
+      <img border="0" src="./images/instergram.png" width="20" height="20"></a>
+      <a href="https://www.youtube.com/channel/UCtPv03j250TDFtimoIqMLJQ/featured">
+      <img border="0" src="./images/youtube.png" width="30" height="30"></a>
+      <a href="https://twitter.com/DessertClub555">
+      <img border="0" src="./images/twitter.png" width="27" height="27"></a>
+  
+    </div>  
+    </div>
+    </footer>
+
+</body>
+
+<!-- background design -->
+<script type="text/javascript" color="244,97,144" opacity="1" zindex="-2" count="100" src="./js/backgroud.js"></script>
+
+</html>

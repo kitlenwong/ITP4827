@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<title>Conversion Tool</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- my css -->
+	<link rel="stylesheet" href="./css/fan.css">
+	<!-- my icon -->
+	<link rel="title icon" href="./images/heart.png">
+	<!-- my function -->
+	<script type="text/javascript" src="./js/index.js"></script>
+	
+<body style="background-image:url('./images/chocolate.jpg'); background-size:cover;">
+	<!-- click menu to show the hidden sidebar -->
+	<nav class="fan-sidebar fan-bar-block fan-card fan-top fan-xlarge" style="display:none;width:30%;min-width:300px;z-index:4;" id="fanbar">
+		<a href="javascript:void(0)" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/X.png" alt="Close" width="20%">Close Menu</a>
+		<a href="index.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/sweet.png" alt="Home" width="30%">Home</a>
+		<a href="recipes.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/recipes.png" alt="Recipes" width="30%">Recipes</a>
+		<a href="suggest.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/suggest.png" alt="Suggestion" width="30%">Suggestion</a>
+		<a href="tool.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/tool.png" alt="Tool" width="30%">Tool</a>
+	</nav>
+
+	<!-- menu design -->
+	<div class="fan-top" >
+		<div class="fan-xlarge" style="max-width:1200px;margin:auto">
+			<div class="fan-display-topleft fan-button fan-padding-16 fan-left" onclick="fan_open()" style="background-color:#f6da8f">☰Tool</div>
+			<div class="fan-center fan-padding-16" style="background-color:#f9d49d; font-family:fantasy; font-size:30px;"><b>Conversion Tool</b></div>
+			<div class="header">
+				<div class="progress-container">
+					<div class="progress-bar" id="myBar"></div>
+				</div>  
+			</div>
+		</div>
+	</div>
+		
+	<!-- Cake Conversion Table information design -->
+	<div id="block_container" class="fan-main fan-content" style="max-width:1200px;margin-top:100px; display:flex; justify-content:space-around;">
+		<div id="block1">
+		<p style="font-size:25px;color:black; text-shadow:2px 2px #ad2175"> Cake Conversion Table</p>
+		<table id="tt1">
+			<tr>
+				<th>Original Size(inch)</th>
+				<th>Target Size(inch)</th>
+				<th>Proportion</th>
+				<th>Original Size(inch)</th>
+				<th>Target Size(inch)</th>
+				<th>Proportion</th>
+			</tr>
+			<tr>
+				<td>6</td><td>4</td><td>44%</td><td>7</td><td>4</td><td>33%</td>
+			</tr>
+			<tr>
+				<td>6</td><td>5</td><td>69%</td><td>7</td><td>5</td><td>51%</td>
+			</tr>
+			<tr>
+				<td>6</td><td>7</td><td>136%</td><td>7</td><td>6</td><td>73%</td>
+			</tr>
+			<tr>
+				<td>6</td><td>8</td><td>178%</td><td>7</td><td>8</td><td>131%</td>
+			</tr>
+			<tr>
+				<td>6</td><td>9</td><td>225%</td><td>7</td><td>9</td><td>165%</td>
+			</tr>
+			<tr>
+				<td>6</td><td>10</td><td>278%</td><td>7</td><td>10</td><td>204%</td>
+			</tr><hr>
+			<tr>
+				<td>8</td><td>4</td><td>25%</td><td>9</td><td>4</td><td>20%</td>
+			</tr>
+			<tr>
+				<td>8</td><td>5</td><td>39%</td><td>9</td><td>5</td><td>31%</td>
+			</tr>
+			<tr>
+				<td>8</td><td>6</td><td>56%</td><td>9</td><td>6</td><td>44%</td>
+			</tr>
+			<tr>
+				<td>8</td><td>7</td><td>77%</td><td>9</td><td>7</td><td>60%</td>
+			</tr>
+			<tr>
+				<td>8</td><td>9</td><td>127%</td><td>9</td><td>8</td><td>79%</td>
+			</tr>
+			<tr>
+				<td>8</td><td>10</td><td>156%</td><td>9</td><td>10</td><td>123%</td>
+			</tr>
+		</table>
+		</div>
+		<!-- weight converter design -->
+		<div id="block2" style="color:black; text-shadow:2px 2px #f4727d; font-size:20px;">
+			<p style="font-size:25px;color:black; text-shadow:2px 2px #ad2175;">Weight Converter</p>
+		
+			<p>
+				<label><b>Pounds&nbsp;&nbsp;&nbsp;</b></label>
+				<input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverterPounds(this.value)" onchange="weightConverter(this.value)">
+				<label><b>Ounces</b></label>
+				<input id="inputOunces" type="number" placeholder="Ounces" oninput="weightConverterOunces(this.value)" onchange="weightConverter(this.value)">
+			</p>
+			<p>
+				<label><b>Kilograms</b></label>
+				<input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverterKIlograms(this.value)" onchange="weightConverter(this.value)">
+				<label><b>Grams</b></label>
+				<input id="inputGrams" type="number" placeholder="Grams" oninput="weightConverterGrams(this.value)" onchange="weightConverter(this.value)">
+			</p>
+			<p> <!-- Questions Game design -->
+				<p style="font-size:25px;color:black; text-shadow:2px 2px #ad2175;">Questions Game</p>
+					<input type="button" value="Start Game!" onclick="play()">
+			</p>
+		</div>
+	</div>
+	<br>
+		
+		<div id="ff2" class="fan-container fan-card-4 fan-center" style="display:none; font-size:15px;font-family:Arial; background-color:#cf8e61;">
+		<p align="right">
+			<input type="button" value="Exit Game" onclick="stopGame()" style="text-align: right;">
+		</p>
+		<h1>Questions Game</h1>
+			<form name="f2" id="f2_temp" onsubmit="correctQ()" method="post">
+				<div id="Q1" style="text-align:left">
+					<h3><b>Q1. Which Type Of Flour Name Does Not Exist?</b></h3>
+					<input type="radio" id="Q1_1" name="Q1_anw" value="All-purpose-flour" required>
+					<label for="Q1_1">All-purpose-flour</label><br>
+					<input type="radio" id="Q1_2" name="Q1_anw" value="Bread Flour">
+					<label for="Q1_1">Bread Flour</label><br>
+					<input type="radio" id="Q1_3" name="Q1_anw" value="Baking Flour" required>
+					<label for="Q1_1">Baking Flour</label><br>
+					<input type="radio" id="Q1_4" name="Q1_anw" value="Cake Flour" required>
+					<label for="Q1_1">Cake Flour</label><br>
+				</div>
+				<div id="Q2" style="text-align:left">
+					<h3><b>Q2. Which Of The Gelatin You Cannot Buy Directly At The Shop?</b></h3>
+					<input type="radio" id="Q2_1" name="Q2_anw" value="Gelatin_Powder" required>
+					<label for="Q2_1">Gelatin Powder</label><br>
+					<input type="radio" id="Q2_2" name="Q2_anw" value="Gelatin_Leave">
+					<label for="Q2_1">Gelatin Leave</label><br>
+					<input type="radio" id="Q2_3" name="Q2_anw" value="Gelatin_Liquid">
+					<label for="Q2_1">Gelatin Liquid</label><br>
+				</div>
+				<div id="Q3" style="text-align:left">
+					<h3><b>Q3.What Is The Function Of A Spatula? (Please Select All That Apply)</b></h3>
+					<input type="checkbox" id="Q3_1" name="Q3_anw" value="smooth icing" checked="checked">
+					<label for="Q3_1">Smooth Icing</label><br>
+					<input type="checkbox" id="Q3_2" name="Q3_anw" value="create swoops and swirls">
+					<label for="Q3_1">Create Swoops And Swirls</label><br>
+					<input type="checkbox" id="Q3_3" name="Q3_anw" value="Frost cakes">
+					<label for="Q3_1">Frost Cakes</label><br>
+					<input type="checkbox" id="Q3_4" name="Q3_anw" value="serve slices of cake or pie">
+					<label for="Q3_1">Serve Slices Of Cake Or Pie</label><br>
+				</div>
+				<div id="Q4" style="text-align:left">
+					<h3><b>Q4. Which One Performs The Best Vanilla Flavor?</b></h3>
+					<input type="radio" id="Q4_1" name="Q4_anw" value="Vanilla Paste" required>
+					<label for="Q4_1">Vanilla Paste</label><br>
+					<input type="radio" id="Q4_2" name="Q4_anw" value="Vanilla Bean">
+					<label for="Q4_1">Vanilla Bean</label><br>
+					<input type="radio" id="Q4_3" name="Q4_anw" value="Vanilla Extract">
+					<label for="Q4_1">Vanilla Extract</label><br>
+				</div>
+				<div style="text-align: center;">
+					<button class="fan-btn fan-black fan-section" type="submit">SEND</button>
+					<button type="reset" class="fan-btn fan-black fan-section">Reset</button>
+				</div>
+			</form>
+		</div>
+	
+</body>
+</html>

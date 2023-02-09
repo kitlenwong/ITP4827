@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- my css -->
+<link rel="stylesheet" href="./css/fan.css">
+<!-- my icon -->
+<link rel="fan icon" href="./images/heart.png">
+<!-- my function -->
+<script type="text/javascript" src="./js/index.js"></script>
+<body>
+
+	<!-- click menu to show the hidden sidebar -->
+	<nav class="fan-sidebar fan-bar-block fan-card fan-top fan-xlarge" style="display:none;width:30%;min-width:300px;z-index:4;" id="fanbar">
+		<a href="javascript:void(0)" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/X.png" alt="Fan Club" width="20%">Close Menu</a>
+		<a href="index.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/sweet.png" alt="Fan Club" width="30%">Home</a>
+		<a href="recipes.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/recipes.png" alt="Fan Club" width="30%">Recipes</a>
+		<a href="suggest.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/suggest.png" alt="joinus" width="30%">Suggestion</a>
+		<a href="tool.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/tool.png" alt="tool" width="30%">Tool</a>
+	</nav>
+
+	<!-- menu design -->
+	<div class="fan-top" >
+		<div class="fan-xlarge" style="max-width:1200px;margin:auto">
+			<div class="fan-display-topleft fan-button fan-padding-16 fan-left" onclick="fan_open()">☰Menu</div>
+			<div class="fan-center fan-padding-16" style="font-family:fantasy; font-size:30px;"><b>Dessert Club</b></div>
+			<div class="header">
+				<div class="progress-container">
+					<div class="progress-bar" id="myBar"></div>
+				</div>  
+			</div>
+		</div>
+  
+	</div>
+  
+	<!-- index & video background design -->
+	<div class="fan-main fan-content" style="max-width:1200px;margin-top:150px;">
+
+	<header style="margin-top:80px;">
+		<div class="overlay">
+			<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="max-width:1200px">
+				<source src="./Video/cook.mp4" type="video/mp4" >
+			</video>
+		</div>
+		<!-- display message on video -->
+		<div class="container box">
+			<h1 class="display-3">Welcome to our Dessert Club</h1>
+			<p class="mb-0" >Coming Soon</p>
+			<p class="mb-0" >2022-05-10</p>
+		</div>
+	</header>
+
+	</div>
+
+	<!-- footer and hyperlink  to outside website (social media)-->
+	<footer id="footer" class="footer" style="display: none;"> 
+    <div class="fan-main fan-content" style="height:50px;">
+		<div class="fan-main fan-content fan-padding">
+			<a href="https://www.instagram.com/dessert_club555/">
+			<img border="0" src="./images/instergram.png" width="20" height="20"></a>
+			<a href="https://www.youtube.com/channel/UCtPv03j250TDFtimoIqMLJQ/featured">
+			<img border="0" src="./images/youtube.png" width="30" height="30"></a>
+			<a href="https://twitter.com/DessertClub555">
+			<img border="0" src="./images/twitter.png" width="27" height="27"></a>
+		</div>  
+    </div>
+	</footer>
+
+	<!-- background design -->
+	<script type="text/javascript" color="244,97,144" opacity="1" zindex="-2" count="100" src="./js/backgroud.js"></script>
+</body>
+</html>

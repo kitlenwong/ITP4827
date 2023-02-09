@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<title>Recipes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- my css -->
+<link rel="stylesheet" href="./css/fan.css">
+<!-- my icon -->
+<link rel="fan icon" href="./images/heart.png">
+<!-- my function -->
+<script type="text/javascript" src="./js/index.js"></script>
+
+<body>
+	<!-- click menu to show the hidden sidebar -->
+	<nav class="fan-sidebar fan-bar-block fan-card fan-top fan-xlarge" style="display:none;width:30%;min-width:300px;z-index:4;" id="fanbar">
+		<a href="javascript:void(0)" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/X.png" alt="Fan Club" width="20%">Close Menu</a>
+		<a href="index.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/sweet.png" alt="Fan Club" width="30%">Home</a>
+		<a href="recipes.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/recipes.png" alt="Fan Club" width="30%">Recipes</a>
+		<a href="suggest.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/suggest.png" alt="joinus" width="30%">Suggestion</a>
+		<a href="tool.html" onclick="fan_close()" class="fan-bar-item fan-button"><img src="./images/tool.png" alt="tool" width="30%">Tool</a>
+	</nav>
+
+	<!-- menu design -->
+	<div class="fan-top">
+		<div class="fan-xlarge" style="max-width:1200px;margin:auto">
+			<div class="fan-display-topleft fan-button fan-padding-16 fan-left" onclick="fan_open()">☰Recipes</div>
+			<div class="fan-center fan-padding-16" style="font-family:fantasy; font-size:30px;"><b>Dessert & Recipes</b></div>
+			<div class="header">
+				<div class="progress-container">
+					<div class="progress-bar" id="myBar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tiramisu recipes design -->
+	<div class="fan-main fan-content fan-padding fan-center" style="max-width:1200px;margin-top:150px;">
+		<div class="fan-third">
+			<img src="./recipes images/tiramisu.png" style="width:100%;border: solid #d16e39;" onclick="onClick(this)">
+			<div class="fan-card" style="border: solid #d16e39;background-color: rgb(255, 255, 255); height: 300px;">
+			<br>
+			<h3><b>Tiramisu</b></h3>
+			<br>
+			<p>Tiramisu is made of ladyfingers dipped in coffee, layered with a whipped mixture of eggs, sugar, and mascarpone cheese, flavoured with cocoa.</p>
+			<a href="./recipes1.html">Recipes</a>
+			<br><br><br><br>
+			</div>
+		</div>
+
+		<!-- Red Velvet Cake recipes design -->
+		<div class="fan-third">
+			<img src="./recipes images/redvelvet.png" style="width:100%;border: solid #d16e39; 	" onclick="onClick(this)">
+			<div class="fan-card" style="border: solid #d16e39;background-color: rgb(255, 255, 255); height: 300px;">
+			<br>
+			<h3><b>Red Velvet Cake</b></h3>
+			<br>
+			<p>Red velvet cake is traditionally a red, red-brown, crimson, or scarlet-colored chocolate layer cake, layered with ermine icing.</p>
+			<a href="./recipes2.html">Recipes</a>
+			<br><br><br><br>
+			</div>
+		</div>
+
+		<!-- Brownie recipes design -->
+		<div class="fan-third">
+			<img src="./recipes images/brownie.png" style="width:100%;border: solid #d16e39; 	" onclick="onClick(this)">
+			<div class="fan-card" style="border: solid #d16e39;background-color: rgb(255, 255, 255); height: 300px;">
+			<br>
+			<h3><b>Brownie</b></h3>
+			<br>
+			<p>A brownie is a dessert made from flour, butter, eggs, sugar and chocolate (or cocoa powder). The texture is somewhere between a cake and soft cookie.</p>
+			<a href="./recipes3.html">Recipes</a>
+			<br><br><br><br>
+			</div>
+			<div class="fan-main fan-content fan-padding" style="height:200px;"></div>
+
+			<!-- click on image to display image box with zoom-in effect -->
+			<div id="profile-a" class="fan-modal fan-black" style="padding-top:0" onclick="this.style.display='none';onClickA()">
+				<span class="fan-center fan-button fan-black fan-xlarge fan-display-topright"></span>
+				<div class="fan-center fan-animate-zoom fan-transparent fan-padding-16">
+
+					<div class="overlay" ondragstart="false;">
+						<img id="profile" class="fan-image" style="width:80%">
+					</div>
+
+					<div class="container">
+						<h1 class="display-3" id="caption" style="margin-top:0px;width :50%;"></h1>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer and hyperlink  to outside website (social media) -->
+			<footer id="footer" class="footer" style="display: none;"> 
+				<div class="fan-main fan-content" style="height:50px;">
+				  <div class="fan-main fan-content fan-padding">
+			
+					<a href="https://www.instagram.com/dessert_club555/">
+					<img border="0" src="./images/instergram.png" width="20" height="20"></a>
+					<a href="https://www.youtube.com/channel/UCtPv03j250TDFtimoIqMLJQ/featured">
+					<img border="0" src="./images/youtube.png" width="30" height="30"></a>
+					<a href="https://twitter.com/DessertClub555">
+					<img border="0" src="./images/twitter.png" width="27" height="27"></a>
+			
+				</div>  
+				</div>
+			  </footer>
+		</div>
+	</div>
+
+	<!-- background design -->
+	<script type="text/javascript" color="244,97,144" opacity="1" zindex="-2" count="100"
+		src="./js/backgroud.js"></script>
+
+</body>
+
+</html>
