@@ -195,3 +195,7 @@ function play() {
 function stopGame() {
 	document.getElementById("ff2").style.display = "none";
 }
+
+function register() {
+	alert("Thankyou for your registration!");
+}
